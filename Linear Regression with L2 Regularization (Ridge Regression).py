@@ -47,7 +47,7 @@ def compute_gradient(X, y, w, b, lambda_):
         f_wb_i = predict(X[i], w, b)
         dj_dw += (f_wb_i - y[i]) * X[i]
         dj_db += (f_wb_i - y[i])
-    dj_dw = (dj_db / m) + (lambda_ / m) * w
+    dj_dw = (dj_dw / m) + (lambda_ / m) * w
     dj_db /= m
 
     return dj_dw, dj_db
@@ -55,7 +55,7 @@ def compute_gradient(X, y, w, b, lambda_):
     
 
 # Implement gradient_descent function (update w and b)
-def gradient_decent(X, y, w, b, learning_rate, iterations, lambda_):
+def gradient_descent(X, y, w, b, learning_rate, iterations, lambda_):
     for i in range(iterations):
         dj_dw, dj_db = compute_gradient(X, y, w, b, lambda_)
 
@@ -64,19 +64,19 @@ def gradient_decent(X, y, w, b, learning_rate, iterations, lambda_):
 
         if i % 500 == 0:
             cost = compute_cost(X, y, w, b, lambda_)
-            print(f"Iterations: {i} cost{cost:.4f}")
+            print(f"Iterations: {i}, Cost: {cost:.4f}")
 
     return w, b
 
 # Initialize parameters (w as 0, b as 0)
 w = 0
 b = 0
-leaning_rate = 0.01
+learning_rate = 0.01
 iterations = 5000
 lambda_ = 0.1
 
 # Run gradient descent and print final cost and parameters
-w, b = gradient_decent(X_scaled, y, w, b, leaning_rate, iterations, lambda_)
+w, b = gradient_descent(X_scaled, y, w, b, learning_rate, iterations, lambda_)
 print(f"Final Paramters: w = {w:.4f}, b = {b:.4f}")
 # Plot data points and fitted regression line
 x_values = np.linspace(400, 2100, 100)
@@ -106,7 +106,7 @@ w_no_reg = 0
 b_no_reg = 0
 
 # Run gradient descent again without regularization
-w_no_reg, b_no_reg = gradient_decent(X_scaled, y, w_no_reg, b_no_reg, leaning_rate, iterations, lambda_no_reg)
+w_no_reg, b_no_reg = gradient_descent(X_scaled, y, w_no_reg, b_no_reg, learning_rate, iterations, lambda_no_reg)
 print(f"Final Paramters: w = {w_no_reg:.4f}, b = {b_no_reg:.4f}")
 # Predict price for same new house size without regularization
 predicted_price_no_reg = predict(new_scaled, w_no_reg, b_no_reg)
