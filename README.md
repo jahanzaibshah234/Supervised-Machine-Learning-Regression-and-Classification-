@@ -22,7 +22,6 @@ Some later projects include **introductory uses of `scikit-learn`** for comparis
 - ✅ Regularization (L1 and L2 penalties)
 - ✅ Logistic Regression for Classification
 - ✅ Decision Boundaries in Classification Problems
-- ✅ Evaluation Metrics: Accuracy, Precision, Recall, F1 Score
 - ✅ Multiclass Classification using One-vs-All
 - ✅ Polynomial Regression
 - ✅ Feature Scaling (Normalization/Standardization)
