@@ -7,7 +7,6 @@ This repository contains my hands-on implementations of supervised machine learn
 ## 📌 About This Repository
 
 Most implementations were done **from scratch** using only `NumPy` and `Matplotlib` for core computations and visualizations — without relying on any high-level ML libraries.  
-Some later projects include **introductory uses of `scikit-learn`** for comparison and demonstration purposes.
 
 ---
 
@@ -25,6 +24,5 @@ Some later projects include **introductory uses of `scikit-learn`** for comparis
 - ✅ Multiclass Classification using One-vs-All
 - ✅ Polynomial Regression
 - ✅ Feature Scaling (Normalization/Standardization)
-- ✅ Introduction to `scikit-learn`
 
 ---
